@@ -1,4 +1,4 @@
-# Concise.
+# Concise
 
 A configurable blog theme for Hugo, with elements inspired by [this blog](https://aranair.github.io/posts/) and [er](http://github.com/lingxz/er).
 
