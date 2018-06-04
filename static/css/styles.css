@@ -133,3 +133,8 @@ h1 {
   font-size: 1.6em;
   margin: .67em 0
 }
+
+code {
+  background-color: #f0f3f3fd;
+  font-family: monospace;
+}
