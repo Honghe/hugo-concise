@@ -6,7 +6,6 @@ body { color: var(--body-text-color); background-color: var(--background-color);
 .heading-font, .global-font { font-family: "Source Sans Pro"; }
 .heading-color { color: var(--heading-text-color); }
 .post-content a, .list-pages a, .pagination a {
-  border-bottom: 1px solid rgba(0,0,0,0.4);
   text-decoration: none;
   color: inherit;
 }
