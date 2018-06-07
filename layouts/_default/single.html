@@ -12,7 +12,7 @@
     {{ end }}
   </p>
   <div class="lh-copy post-content">
-    {{ .Content | replaceRE "<p><img src=\"" "<p><img src=\"../" | safeHTML }}
+    {{ .Content | replaceRE "<img src=\"" "<img src=\"../" | replaceRE "<img src=\"../(https?://)" "<img src=\"$1" | safeHTML }}
   </div>
 </main>
 {{ partial "table-of-contents" . }}
