@@ -10,14 +10,17 @@
     {{ if isset .Params "tags" }}
     tags: [ {{ range .Params.tags }}<a href='{{ "/tags/" | relLangURL }}{{ . | urlize }}' class="link silver">{{ . }}</a> {{ end }} ]
     {{ end }}
-  </p>
+  </p>  
   <div class="lh-copy post-content">
-    <!-- cause replaceRE not support (?!re)	before text not matching re, so use twice replaceRE to add ../ before imges. (?!re)	before text not matching re -->
-    {{ .Content | replaceRE "<img src=\"" "<img src=\"../" | replaceRE "<img src=\"../(https?://)" "<img src=\"$1" | safeHTML }}
+      {{ if eq .File.BaseFileName "index" }}
+      {{ .Content }}
+    {{ else }}
+     <!-- cause replaceRE not support (?!re)	before text not matching re, so use twice replaceRE to add ../ before imges. (?!re)	before text not matching re -->
+     {{ .Content | replaceRE "<img src=\"" "<img src=\"../" | replaceRE "<img src=\"../(https?://)" "<img src=\"$1" | safeHTML }}
+    {{ end }}
   </div>
 </main>
 {{ partial "table-of-contents" . }}
-
 
 <div class="pagination tc tr-l db fixed-l bottom-2-l right-2-l mb3 mb0-l">
   {{ partial "back-to-top.html" . }}<br>
