@@ -11,7 +11,9 @@
     tags: [ {{ range .Params.tags }}<a href='{{ "/tags/" | relLangURL }}{{ . | urlize }}' class="link silver">{{ . }}</a> {{ end }} ]
     {{ end }}
   </p>
-  <div class="lh-copy post-content">{{ .Content }}</div>
+  <div class="lh-copy post-content">
+    {{ .Content | replaceRE "<p><img src=\"" "<p><img src=\"../" | safeHTML }}
+  </div>
 </main>
 {{ partial "table-of-contents" . }}
 
