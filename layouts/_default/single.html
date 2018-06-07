@@ -12,6 +12,7 @@
     {{ end }}
   </p>
   <div class="lh-copy post-content">
+    <!-- cause replaceRE not support (?!re)	before text not matching re, so use twice replaceRE to add ../ before imges. (?!re)	before text not matching re -->
     {{ .Content | replaceRE "<img src=\"" "<img src=\"../" | replaceRE "<img src=\"../(https?://)" "<img src=\"$1" | safeHTML }}
   </div>
 </main>
