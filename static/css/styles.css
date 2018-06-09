@@ -1,4 +1,4 @@
-html { font-size: 16px; }
+html { font-size: 15px; }
 body { color: var(--body-text-color); background-color: var(--background-color);}
 .main-color { color: var(--main-color); }
 .secondary-color { color: var(--secondary-color); }
@@ -124,13 +124,42 @@ table tr th, table tr td {
 /* by honhe force*/
 
 main {
-  margin-top: 16px!important;
-  margin-bottom: 16px!important;
+  margin-top: 8px!important;
+  margin-bottom: 8px!important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 2px!important;
+  margin-bottom: 2px!important;
 }
 
 h1 {
-  font-size: 1.6em;
-  margin: .67em 0
+  font-size: 1.4em;
+}
+
+h2 {
+  font-size: 1.3em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+h4 {
+  font-size: 1.1em;
+}
+
+h5 {
+  font-size: 1.0em;
+}
+
+h6 {
+  font-size: 0.9em;
 }
 
 code {
