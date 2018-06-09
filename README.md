@@ -59,7 +59,7 @@ showtoc = false
 
 Math rendering is off by default, can be turned on for individual posts or pages by setting `math = true` in the frontmatter.
 * inline math with `$ $` surround
-* style math with `$$ $$` surround, `<p>$$ $$</p>` surround for multi line.
+* style math with `$$ $$` surround, `<div>$$ $$</div>` surround for multi line.
 ```
 # inline math
 $ e=mc^2 $
@@ -68,10 +68,12 @@ $ e=mc^2 $
 $$ e=mc^2 $$
 
 # multi line style math
+<div>
 $$
 e = mc^2 \\
 e = mc^2
 $$
+</div>
 ```
 
 ### Tag cloud
